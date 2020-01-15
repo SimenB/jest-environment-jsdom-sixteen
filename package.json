@@ -1,0 +1,22 @@
+{
+  "name": "jest-environment-jsdom-sixteen",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10.10.0"
+  },
+  "dependencies": {
+    "@jest/fake-timers": "^25.0.0",
+    "jest-mock": "^25.0.0",
+    "jest-util": "^25.0.0",
+    "jsdom": "^16.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
