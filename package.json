@@ -9,6 +9,8 @@
   "files": [
     "index.js"
   ],
+  "repository": "git@github.com:SimenB/jest-environment-jsdom-sixteen.git",
+  "author": "Simen Bekkhus <sbekkhus91@gmail.com>",
   "dependencies": {
     "@jest/fake-timers": "^25.0.0",
     "jest-mock": "^25.0.0",
