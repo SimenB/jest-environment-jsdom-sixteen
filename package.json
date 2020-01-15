@@ -6,6 +6,9 @@
   "engines": {
     "node": ">= 10.10.0"
   },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "@jest/fake-timers": "^25.0.0",
     "jest-mock": "^25.0.0",
