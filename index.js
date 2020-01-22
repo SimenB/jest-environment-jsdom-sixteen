@@ -3,8 +3,7 @@ const { installCommonGlobals } = require('jest-util');
 const { ModuleMocker } = require('jest-mock');
 const {
   JestFakeTimers: LegacyFakeTimers,
-  // Re-add when 25 stable is released, which includes the Lolex implementation
-  // LolexFakeTimers,
+  LolexFakeTimers,
 } = require('@jest/fake-timers');
 const { JSDOM, VirtualConsole } = require('jsdom');
 
@@ -68,7 +67,7 @@ module.exports = class JSDOMEnvironment {
       timerConfig,
     });
 
-    // this.fakeTimersLolex = new LolexFakeTimers({ config, global });
+    this.fakeTimersLolex = new LolexFakeTimers({ config, global });
   }
 
   async setup() {}
@@ -102,12 +101,9 @@ module.exports = class JSDOMEnvironment {
     return null;
   }
 
-  compileFunction(code, params, filename) {
+  getVmContext() {
     if (this.dom) {
-      return compileFunction(code, params, {
-        filename,
-        parsingContext: this.dom.getInternalVMContext(),
-      });
+      return this.dom.getInternalVMContext();
     }
     return null;
   }
