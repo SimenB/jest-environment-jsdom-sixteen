@@ -12,10 +12,10 @@
   "repository": "git@github.com:SimenB/jest-environment-jsdom-sixteen.git",
   "author": "Simen Bekkhus <sbekkhus91@gmail.com>",
   "dependencies": {
-    "@jest/fake-timers": "^25.0.0",
-    "jest-mock": "^25.0.0",
-    "jest-util": "^25.0.0",
-    "jsdom": "^16.0.0"
+    "@jest/fake-timers": "^25.1.0",
+    "jest-mock": "^25.1.0",
+    "jest-util": "^25.1.0",
+    "jsdom": "^16.0.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
