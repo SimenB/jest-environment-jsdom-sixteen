@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": ">= 10.10.0"
+    "node": "^10.14.2 || >= 12.0.0"
   },
   "files": [
     "index.js"
