@@ -9,11 +9,18 @@ const { JSDOM, VirtualConsole } = require('jsdom');
 
 module.exports = class JSDOMEnvironment {
   constructor(config, options) {
+    const anyConsole = options.console || console;
+    const virtualConsole = new VirtualConsole();
+    virtualConsole.sendTo(anyConsole, { omitJSDOMErrors: true });
+    virtualConsole.on('jsdomError', (error) => {
+      anyConsole.error(error);
+    });
+
     this.dom = new JSDOM('<!DOCTYPE html>', {
       pretendToBeVisual: true,
       runScripts: 'dangerously',
       url: config.testURL,
-      virtualConsole: new VirtualConsole().sendTo(options.console || console),
+      virtualConsole,
       ...config.testEnvironmentOptions,
     });
     const global = (this.global = this.dom.window.document.defaultView);
