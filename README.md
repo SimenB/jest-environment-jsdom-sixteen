@@ -1,5 +1,7 @@
 # jest-environment-jsdom-sixteen
 
+> Jest v26 ships with JSDOM@16, so no reason to use this package
+
 [Jest](https://jestjs.io) v25 by default uses [JSDOM](https://github.com/jsdom/jsdom) 15 to support Node 8. This package should also be compatible with Jest 24 and earlier.
 
 This package comes with JSDOM v16, which also enables support for [V8 code coverage](https://jestjs.io/docs/configuration#coverageprovider-string).
